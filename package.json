@@ -2,9 +2,13 @@
   "name": "pebble-first",
   "author": "MakeAwesomeHappen",
   "version": "1.0.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@rebble/clay": "^1.0.10"
+  },
   "pebble": {
     "displayName": "pebble-first",
     "uuid": "d89b68ee-c347-4618-a3ff-ca66f928585a",
@@ -23,10 +27,23 @@
       "watchface": true
     },
     "messageKeys": [
-      "dummy"
+      "TEMPERATURE",
+      "CONDITIONS",
+      "REQUEST_WEATHER",
+      "ShowSeconds"
     ],
     "resources": {
-      "media": []
-    }
+      "media": [
+        {
+          "type": "bitmap",
+          "name": "IMAGE_BT_ICON",
+          "file": "images/bt-icon.png"
+        }
+      ]
+    },
+    "capabilities": [
+      "location",
+      "configurable"
+    ]
   }
 }
